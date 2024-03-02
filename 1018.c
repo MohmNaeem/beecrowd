@@ -72,7 +72,7 @@ int main()
         nota_2 = 0;
     }
 
-    if (temp < 2)
+    if (temp >= 0 && temp < 2)
     {
         nota_1 = temp / 1;
         remainder = temp % 1;
@@ -83,7 +83,16 @@ int main()
         nota_1 = 0;
     }
 
-    printf("%d\n", amount);
+    if (amount > 0)
+    {
+        printf("%d\n", amount);
+    }
+    else
+    {
+        amount = 0;
+        printf("%d\n", amount);
+    }
+
     printf("%d nota(s) de R$ 100,00\n", nota_100);
     printf("%d nota(s) de R$ 50,00\n", nota_50);
     printf("%d nota(s) de R$ 20,00\n", nota_20);
